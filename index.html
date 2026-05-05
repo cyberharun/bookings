@@ -728,10 +728,16 @@
     });
   }
 
+  function formatDateDisplay(dateStr) {
+  if (!dateStr) return '';
+  const [y, m, d] = dateStr.split('-');
+  return `${d}.${m}.${y}`;
+}
+
   function renderSummary() {
     const rows = [
       ['Lokacija',  state.location],
-      ['Datum',     state.date],
+      ['Datum', formatDateDisplay(state.date)],
       ['Termin',    state.slot],
       ['Trajanje',  state.duration + ' minuta'],
       ['Ime',       state.name],
