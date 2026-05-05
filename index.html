@@ -522,7 +522,16 @@
     document.getElementById('date').min = today;
 
     try {
-      const data = await jsonp(buildUrl('getLocations'));
+      <select id="location">
+        <option value="">— Odaberi lokaciju —</option>
+        <option value="Plarola">Plarola</option>
+        <option value="Plamingo Gracanica MP">Plamingo Gracanica MP</option>
+        <option value="Plamingo Doboj MP">Plamingo Doboj MP</option>
+        <option value="Plamingo Tuzla MP">Plamingo Tuzla MP</option>
+        <option value="Plamingo Visoko MP">Plamingo Visoko MP</option>
+        <option value="Plamingo Kakanj MP">Plamingo Kakanj MP</option>
+        <option value="Plamingo Kladanj MP">Plamingo Kladanj MP</option>
+      </select>
       const sel = document.getElementById('location');
 
       (data.locations || []).forEach(loc => {
