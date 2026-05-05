@@ -397,6 +397,13 @@
         <label>Prodajno mjesto</label>
         <select id="location">
           <option value="">— Odaberi lokaciju —</option>
+          <option value="Plarola">Plarola</option>
+          <option value="Plamingo Gracanica MP">Plamingo Gracanica MP</option>
+          <option value="Plamingo Doboj MP">Plamingo Doboj MP</option>
+          <option value="Plamingo Tuzla MP">Plamingo Tuzla MP</option>
+          <option value="Plamingo Visoko MP">Plamingo Visoko MP</option>
+          <option value="Plamingo Kakanj MP">Plamingo Kakanj MP</option>
+          <option value="Plamingo Kladanj MP">Plamingo Kladanj MP</option>
         </select>
       </div>
 
@@ -518,36 +525,9 @@
 
   // ─── Init ────────────────────────────────────────────────
   (async () => {
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('date').min = today;
-
-    try {
-      <select id="location">
-        <option value="">— Odaberi lokaciju —</option>
-        <option value="Plarola">Plarola</option>
-        <option value="Plamingo Gracanica MP">Plamingo Gracanica MP</option>
-        <option value="Plamingo Doboj MP">Plamingo Doboj MP</option>
-        <option value="Plamingo Tuzla MP">Plamingo Tuzla MP</option>
-        <option value="Plamingo Visoko MP">Plamingo Visoko MP</option>
-        <option value="Plamingo Kakanj MP">Plamingo Kakanj MP</option>
-        <option value="Plamingo Kladanj MP">Plamingo Kladanj MP</option>
-      </select>
-      const sel = document.getElementById('location');
-
-      (data.locations || []).forEach(loc => {
-        const o = document.createElement('option');
-        o.value = loc;
-        o.textContent = loc;
-        sel.appendChild(o);
-      });
-
-      if (!data.locations || !data.locations.length) {
-        showSlotArea('empty', 'Nema aktivnih lokacija u konfiguraciji.');
-      }
-    } catch (e) {
-      showSlotArea('error', 'Greška pri učitavanju lokacija. Pokušaj ponovo.');
-    }
-  })();
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('date').min = today;
+})();
 
   // ─── Event listeners ────────────────────────────────────
   document.getElementById('location').addEventListener('change', async function () {
