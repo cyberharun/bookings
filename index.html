@@ -530,12 +530,12 @@
 })();
 
   // ─── Event listeners ────────────────────────────────────
-  document.getElementById('location').addEventListener('change', async function () {
+  document.getElementById('location').addEventListener('change', function () {
     const loc = this.value;
     const durSel = document.getElementById('duration');
     const dateInput = document.getElementById('date');
 
-    durSel.innerHTML = '<option value="">— Učitavanje… —</option>';
+    durSel.innerHTML = '<option value="">— Prvo odaberi lokaciju —</option>';
     durSel.disabled = true;
     dateInput.disabled = true;
     dateInput.value = '';
@@ -543,44 +543,19 @@
     selectedSlot = null;
     document.getElementById('btn-next1').disabled = true;
 
-    if (!loc) {
-      durSel.innerHTML = '<option value="">— Prvo odaberi lokaciju —</option>';
-      return;
-    }
+    if (!loc) return;
 
     durSel.innerHTML = '<option value="">— Odaberi trajanje —</option>';
 
-[15, 30, 45, 60].forEach(d => {
-  const o = document.createElement('option');
-  o.value = d;
-  o.textContent = d + ' minuta';
-  durSel.appendChild(o);
-});
+    [15, 30, 45, 60].forEach(d => {
+      const o = document.createElement('option');
+      o.value = d;
+      o.textContent = d + ' minuta';
+      durSel.appendChild(o);
+    });
 
-durSel.disabled = false;
-clearSlotArea();
-
-      if (data.error) {
-        durSel.innerHTML = '<option value="">— Greška —</option>';
-        showSlotArea('error', data.error);
-        return;
-      }
-
-      durSel.innerHTML = '<option value="">— Odaberi trajanje —</option>';
-
-      (data.durations || []).forEach(d => {
-        const o = document.createElement('option');
-        o.value = d;
-        o.textContent = d + ' minuta';
-        durSel.appendChild(o);
-      });
-
-      durSel.disabled = false;
-      clearSlotArea();
-    } catch (e) {
-      durSel.innerHTML = '<option value="">— Greška —</option>';
-      showSlotArea('error', 'Greška pri učitavanju trajanja.');
-    }
+    durSel.disabled = false;
+    clearSlotArea();
   });
 
   document.getElementById('duration').addEventListener('change', function () {
