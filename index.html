@@ -34,342 +34,88 @@
       padding: 0;
     }
 
-    .page-wrap {
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 32px 20px 48px;
-    }
+    .page-wrap { max-width: 520px; margin: 0 auto; padding: 32px 20px 48px; }
 
-    /* Header */
-    .header {
-      margin-bottom: 32px;
-    }
-    .header-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-    .header h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 28px;
-      font-weight: 400;
-      color: var(--brand);
-      line-height: 1.2;
-      margin-bottom: 6px;
-    }
-    .header p {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
+    .header { margin-bottom: 32px; }
+    .header-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .header h1 { font-family: 'DM Serif Display', serif; font-size: 28px; font-weight: 400; color: var(--brand); line-height: 1.2; margin-bottom: 6px; }
+    .header p { font-size: 14px; color: var(--text-muted); }
 
-    /* Progress bar */
-    .progress-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 28px;
-    }
-    .progress-step {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex: 1;
-    }
+    .progress-wrap { display: flex; align-items: center; gap: 0; margin-bottom: 28px; }
+    .progress-step { display: flex; align-items: center; gap: 8px; flex: 1; }
     .progress-step:last-child { flex: 0; }
-    .step-dot {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: 1.5px solid var(--border);
-      background: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-faint);
-      flex-shrink: 0;
-      transition: all 0.3s;
-    }
-    .step-dot.active {
-      border-color: var(--brand);
-      background: var(--brand);
-      color: #fff;
-    }
-    .step-dot.done {
-      border-color: var(--brand-mid);
-      background: var(--brand-light);
-      color: var(--brand);
-    }
+    .step-dot { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--white); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--text-faint); flex-shrink: 0; transition: all 0.3s; }
+    .step-dot.active { border-color: var(--brand); background: var(--brand); color: #fff; }
+    .step-dot.done { border-color: var(--brand-mid); background: var(--brand-light); color: var(--brand); }
     .step-dot.done::after { content: '✓'; font-size: 12px; }
     .step-dot.done span { display: none; }
-    .step-line {
-      flex: 1;
-      height: 1.5px;
-      background: var(--border);
-      transition: background 0.3s;
-      margin: 0 4px;
-    }
+    .step-line { flex: 1; height: 1.5px; background: var(--border); transition: background 0.3s; margin: 0 4px; }
     .step-line.done { background: var(--brand-mid); }
 
-    /* Card */
-    .card {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
+    .card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); padding: 24px; box-shadow: var(--shadow); }
 
-    /* Form fields */
     .field { margin-bottom: 18px; }
     .field:last-of-type { margin-bottom: 0; }
 
-    label {
-      display: block;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 7px;
-    }
+    label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 7px; }
 
     select, input[type="date"], input[type="text"], input[type="tel"], input[type="email"] {
-      width: 100%;
-      height: 46px;
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      padding: 0 14px;
-      font-size: 15px;
-      font-family: 'DM Sans', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      outline: none;
-      appearance: none;
-      -webkit-appearance: none;
+      width: 100%; height: 46px;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      padding: 0 14px; font-size: 15px;
+      font-family: 'DM Sans', sans-serif; color: var(--text);
+      background: var(--white); outline: none;
+      appearance: none; -webkit-appearance: none;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
-    select:focus, input:focus {
-      border-color: var(--brand-mid);
-      box-shadow: 0 0 0 3px rgba(45,106,74,0.1);
-    }
-    select:disabled, input:disabled {
-      background: #f5f5f5;
-      color: var(--text-faint);
-      cursor: not-allowed;
-    }
+    select:focus, input:focus { border-color: var(--brand-mid); box-shadow: 0 0 0 3px rgba(45,106,74,0.1); }
+    select:disabled, input:disabled { background: #f5f5f5; color: var(--text-faint); cursor: not-allowed; }
 
-    /* Slot grid */
     .slot-section { margin-top: 20px; }
     .slot-section label { margin-bottom: 10px; }
-    .slot-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(82px, 1fr));
-      gap: 8px;
-    }
-    .slot-btn {
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      padding: 11px 0;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: 'DM Sans', sans-serif;
-      background: var(--white);
-      cursor: pointer;
-      transition: all 0.15s;
-      text-align: center;
-      color: var(--text);
-    }
-    .slot-btn:hover {
-      border-color: var(--brand-mid);
-      color: var(--brand);
-      background: var(--brand-light);
-    }
-    .slot-btn.selected {
-      background: var(--brand);
-      color: #fff;
-      border-color: var(--brand);
-    }
-    .slot-btn.taken {
-      background: #f5f5f5;
-      color: #bbb;
-      border-color: #e0e0e0;
-      cursor: not-allowed;
-      text-decoration: line-through;
-      opacity: 0.7;
-    }
-    .slot-btn.taken:hover {
-      background: #f5f5f5;
-      color: #bbb;
-      border-color: #e0e0e0;
-    }
+    .slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(82px, 1fr)); gap: 8px; }
 
-    /* Status messages */
-    .status-msg {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      padding: 10px 14px;
-      border-radius: 8px;
-      margin-top: 12px;
-    }
-    .status-msg.loading {
-      background: #f0f0f0;
-      color: var(--text-muted);
-    }
-    .status-msg.empty {
-      background: #fff8e6;
-      color: #7a5c00;
-      border: 1px solid #f0d080;
-    }
-    .status-msg.error-msg {
-      background: #fef0ee;
-      color: var(--error);
-      border: 1px solid #f5c0bb;
-    }
+    .slot-btn { border: 1.5px solid var(--border); border-radius: 10px; padding: 11px 0; font-size: 14px; font-weight: 500; font-family: 'DM Sans', sans-serif; background: var(--white); cursor: pointer; transition: all 0.15s; text-align: center; color: var(--text); }
+    .slot-btn:hover { border-color: var(--brand-mid); color: var(--brand); background: var(--brand-light); }
+    .slot-btn.selected { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .slot-btn.taken { background: #f5f5f5; color: #bbb; border-color: #e0e0e0; cursor: not-allowed; text-decoration: line-through; opacity: 0.6; }
+    .slot-btn.taken:hover { background: #f5f5f5; color: #bbb; border-color: #e0e0e0; }
 
-    /* Buttons */
-    .btn-primary {
-      width: 100%;
-      height: 50px;
-      background: var(--brand);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 600;
-      font-family: 'DM Sans', sans-serif;
-      cursor: pointer;
-      margin-top: 22px;
-      transition: background 0.2s, transform 0.1s;
-      letter-spacing: 0.02em;
-    }
+    .status-msg { display: flex; align-items: center; gap: 8px; font-size: 13px; padding: 10px 14px; border-radius: 8px; margin-top: 12px; }
+    .status-msg.loading { background: #f0f0f0; color: var(--text-muted); }
+    .status-msg.empty { background: #fff8e6; color: #7a5c00; border: 1px solid #f0d080; }
+    .status-msg.error-msg { background: #fef0ee; color: var(--error); border: 1px solid #f5c0bb; }
+
+    .btn-primary { width: 100%; height: 50px; background: var(--brand); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; margin-top: 22px; transition: background 0.2s, transform 0.1s; letter-spacing: 0.02em; }
     .btn-primary:hover { background: var(--brand-mid); }
     .btn-primary:active { transform: scale(0.99); }
-    .btn-primary:disabled {
-      background: #c8c8c8;
-      cursor: not-allowed;
-      transform: none;
-    }
+    .btn-primary:disabled { background: #c8c8c8; cursor: not-allowed; transform: none; }
 
-    .btn-back {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 13px;
-      font-family: 'DM Sans', sans-serif;
-      cursor: pointer;
-      padding: 10px 0 0;
-      transition: color 0.15s;
-    }
+    .btn-back { display: flex; align-items: center; gap: 6px; background: none; border: none; color: var(--text-muted); font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; padding: 10px 0 0; transition: color 0.15s; }
     .btn-back:hover { color: var(--text); }
 
-    /* Steps */
     .step { display: none; }
     .step.active { display: block; }
 
-    /* Summary box */
-    .summary-box {
-      background: var(--brand-light);
-      border: 1px solid #b8d9c4;
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin: 4px 0 8px;
-    }
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 5px 0;
-      border-bottom: 1px solid #cce5d4;
-      font-size: 14px;
-    }
+    .summary-box { background: var(--brand-light); border: 1px solid #b8d9c4; border-radius: 10px; padding: 18px 20px; margin: 4px 0 8px; }
+    .summary-row { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; border-bottom: 1px solid #cce5d4; font-size: 14px; }
     .summary-row:last-child { border-bottom: none; }
-    .summary-row .s-label {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--brand-mid);
-    }
-    .summary-row .s-value {
-      font-weight: 500;
-      color: var(--brand);
-      text-align: right;
-      max-width: 60%;
-    }
+    .summary-row .s-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--brand-mid); }
+    .summary-row .s-value { font-weight: 500; color: var(--brand); text-align: right; max-width: 60%; }
 
-    /* Confirm screen */
-    .confirm-screen {
-      text-align: center;
-      padding: 8px 0 16px;
-    }
-    .confirm-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--brand-light);
-      border: 2px solid #b8d9c4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 26px;
-    }
-    .confirm-screen h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 24px;
-      font-weight: 400;
-      color: var(--brand);
-      margin-bottom: 10px;
-    }
-    .confirm-screen p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 6px;
-    }
-    .ref-badge {
-      display: inline-block;
-      background: var(--brand-light);
-      border: 1px solid #b8d9c4;
-      color: var(--brand);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin: 12px 0 4px;
-      letter-spacing: 0.06em;
-    }
+    .confirm-screen { text-align: center; padding: 8px 0 16px; }
+    .confirm-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--brand-light); border: 2px solid #b8d9c4; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 26px; }
+    .confirm-screen h2 { font-family: 'DM Serif Display', serif; font-size: 24px; font-weight: 400; color: var(--brand); margin-bottom: 10px; }
+    .confirm-screen p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 6px; }
+    .ref-badge { display: inline-block; background: var(--brand-light); border: 1px solid #b8d9c4; color: var(--brand); font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin: 12px 0 4px; letter-spacing: 0.06em; }
 
-    /* Spinner */
     @keyframes spin { to { transform: rotate(360deg); } }
-    .spinner {
-      width: 14px; height: 14px;
-      border: 2px solid #ddd;
-      border-top-color: var(--brand-mid);
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-      flex-shrink: 0;
-    }
+    .spinner { width: 14px; height: 14px; border: 2px solid #ddd; border-top-color: var(--brand-mid); border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
 
-    /* Fade in */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     .step.active { animation: fadeUp 0.25s ease; }
 
-    /* Mobile */
     @media (max-width: 420px) {
       .page-wrap { padding: 20px 14px 40px; }
       .header h1 { font-size: 24px; }
@@ -380,32 +126,23 @@
 <body>
 <div class="page-wrap">
 
-  <!-- Header -->
   <div class="header">
     <div class="header-label">Plarola / Plamingo</div>
     <h1>Zakaži termin</h1>
-    <p>Odaberi lokaciju, trajanje i slobodan termin</p>
+    <p>Odaberi lokaciju i slobodan termin</p>
   </div>
 
-  <!-- Progress -->
   <div class="progress-wrap">
-    <div class="progress-step">
-      <div class="step-dot active" id="dot1"><span>1</span></div>
-    </div>
+    <div class="progress-step"><div class="step-dot active" id="dot1"><span>1</span></div></div>
     <div class="step-line" id="line1"></div>
-    <div class="progress-step">
-      <div class="step-dot" id="dot2"><span>2</span></div>
-    </div>
+    <div class="progress-step"><div class="step-dot" id="dot2"><span>2</span></div></div>
     <div class="step-line" id="line2"></div>
-    <div class="progress-step">
-      <div class="step-dot" id="dot3"><span>3</span></div>
-    </div>
+    <div class="progress-step"><div class="step-dot" id="dot3"><span>3</span></div></div>
   </div>
 
-  <!-- KORAK 1: Lokacija, trajanje, datum, slot -->
+  <!-- KORAK 1 -->
   <div class="step active" id="step1">
     <div class="card">
-
       <div class="field">
         <label>Prodajno mjesto</label>
         <select id="location">
@@ -421,64 +158,44 @@
       </div>
 
       <div class="field">
-        <label>Trajanje tretmana</label>
-        <select id="duration" disabled>
-          <option value="">— Prvo odaberi lokaciju —</option>
-        </select>
-      </div>
-
-      <div class="field">
         <label>Datum</label>
         <input type="date" id="date" disabled>
       </div>
 
       <div id="slot-area"></div>
-
     </div>
 
-    <button class="btn-primary" id="btn-next1" disabled onclick="goStep(2)">
-      Dalje →
-    </button>
+    <button class="btn-primary" id="btn-next1" disabled onclick="goStep(2)">Dalje →</button>
   </div>
 
-  <!-- KORAK 2: Lični podaci -->
+  <!-- KORAK 2 -->
   <div class="step" id="step2">
     <div class="card">
-
       <div class="field">
         <label>Ime i prezime</label>
         <input type="text" id="name" placeholder="Amina Hodžić" oninput="validateStep2()">
       </div>
-
       <div class="field">
         <label>Broj telefona</label>
-        <input type="tel" id="phone" placeholder="+387 61 123 456" oninput="validateStep2()">
+        <input type="tel" id="phone" placeholder="061 123 456" oninput="validateStep2()">
       </div>
-
       <div class="field">
         <label>Email adresa</label>
         <input type="email" id="email" placeholder="amina@gmail.com" oninput="validateStep2()">
       </div>
-
     </div>
-
-    <button class="btn-primary" id="btn-next2" disabled onclick="goStep(3)">
-      Pregledaj rezervaciju →
-    </button>
+    <button class="btn-primary" id="btn-next2" disabled onclick="goStep(3)">Pregledaj rezervaciju →</button>
     <button class="btn-back" onclick="goStep(1)">← Nazad</button>
   </div>
 
-  <!-- KORAK 3: Pregled i potvrda -->
+  <!-- KORAK 3 -->
   <div class="step" id="step3">
     <div class="card">
       <div style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:14px;">Pregled rezervacije</div>
       <div class="summary-box" id="summary"></div>
       <div id="submit-error" style="display:none"></div>
     </div>
-
-    <button class="btn-primary" id="btn-confirm" onclick="submitBooking()">
-      Potvrdi termin
-    </button>
+    <button class="btn-primary" id="btn-confirm" onclick="submitBooking()">Potvrdi termin</button>
     <button class="btn-back" onclick="goStep(2)">← Izmijeni podatke</button>
   </div>
 
@@ -493,83 +210,40 @@
         <div class="ref-badge" id="ref-badge"></div>
       </div>
     </div>
-    <button class="btn-primary" style="margin-top:16px" onclick="resetForm()">
-      Zakaži novi termin
-    </button>
+    <button class="btn-primary" style="margin-top:16px" onclick="resetForm()">Zakaži novi termin</button>
   </div>
 
 </div>
-
 <script>
-  // ← ZAMIJENI OVO SA TVOJIM APPS SCRIPT /exec URL-om
+  // ← Cloudflare Worker URL — provjeri da je tačan
   const API = 'https://booking-proxy.harun-car.workers.dev/';
+
+  const DURATION = 60; // Fiksno 60 minuta
 
   let selectedSlot = null;
   let state = {};
 
-  // ─── Fetch helper: radi jer Worker dodaje CORS headere ──────
   async function apiFetch(action, params = {}) {
     const qs = new URLSearchParams({ action, ...params });
-    const url = API + '?' + qs.toString();
-    const response = await fetch(url);
+    const response = await fetch(API + '?' + qs.toString());
     if (!response.ok) throw new Error('HTTP ' + response.status);
     return response.json();
   }
 
-  function buildUrl(action, params = {}) {
-    const qs = new URLSearchParams({ action, ...params });
-    return API + '?' + qs.toString();
-  }
-
-  // ─── Init ────────────────────────────────────────────────
   (async () => {
-  const today = new Date().toISOString().split('T')[0];
-  document.getElementById('date').min = today;
-})();
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').min = today;
+  })();
 
-  // ─── Event listeners ────────────────────────────────────
   document.getElementById('location').addEventListener('change', function () {
-    const loc = this.value;
-    const durSel = document.getElementById('duration');
     const dateInput = document.getElementById('date');
-
-    durSel.innerHTML = '<option value="">— Prvo odaberi lokaciju —</option>';
-    durSel.disabled = true;
     dateInput.disabled = true;
     dateInput.value = '';
     clearSlotArea();
     selectedSlot = null;
     document.getElementById('btn-next1').disabled = true;
-
-    if (!loc) return;
-
-    durSel.innerHTML = '<option value="">— Odaberi trajanje —</option>';
-
-    [15, 30, 45, 60].forEach(d => {
-      const o = document.createElement('option');
-      o.value = d;
-      o.textContent = d + ' minuta';
-      durSel.appendChild(o);
-    });
-
-    durSel.disabled = false;
-    clearSlotArea();
-  });
-
-  document.getElementById('duration').addEventListener('change', function () {
-    const dateInput = document.getElementById('date');
-
-    selectedSlot = null;
-    document.getElementById('btn-next1').disabled = true;
-    clearSlotArea();
-
-    if (this.value) {
-      dateInput.disabled = false;
-      if (dateInput.value) loadSlots();
-    } else {
-      dateInput.disabled = true;
-      dateInput.value = '';
-    }
+    if (!this.value) return;
+    dateInput.disabled = false;
   });
 
   document.getElementById('date').addEventListener('change', function () {
@@ -578,41 +252,27 @@
     if (this.value) loadSlots();
   });
 
-  // ─── Load slots ──────────────────────────────────────────
   async function loadSlots() {
     const location = document.getElementById('location').value;
     const date     = document.getElementById('date').value;
-    const duration = document.getElementById('duration').value;
-
-    if (!location || !date || !duration) return;
+    if (!location || !date) return;
 
     selectedSlot = null;
     document.getElementById('btn-next1').disabled = true;
-    showSlotArea('loading', 'Učitavanje slobodnih termina…');
+    showSlotArea('loading', 'Učitavanje termina…');
 
     try {
-      const data = await apiFetch('getSlots', {
-        location,
-        date,
-        duration
-      });
+      const data = await apiFetch('getSlots', { location, date, duration: DURATION });
 
-      if (data.error) {
-        showSlotArea('error', data.error);
-        return;
-      }
+      if (data.error) { showSlotArea('error', data.error); return; }
 
       if (!data.slots || !data.slots.length) {
-        showSlotArea('empty', data.message || 'Nema slobodnih termina za ovaj datum.');
+        showSlotArea('empty', data.message || 'Nema termina za ovaj datum.');
         return;
       }
 
-      // Provjeri ima li ijednog slobodnog
       const hasAny = data.slots.some(s => s.available);
-      if (!hasAny) {
-        showSlotArea('empty', 'Svi termini za ovaj datum su zauzeti.');
-        return;
-      }
+      if (!hasAny) { showSlotArea('empty', 'Svi termini za ovaj datum su zauzeti.'); return; }
 
       renderSlots(data.slots);
     } catch (e) {
@@ -627,7 +287,6 @@
         <label>Slobodni termini</label>
         <div class="slot-grid" id="slot-grid"></div>
       </div>`;
-
     const grid = document.getElementById('slot-grid');
 
     slots.forEach(slot => {
@@ -651,19 +310,15 @@
 
       grid.appendChild(btn);
     });
-
     notifyHeight();
   }
 
   function showSlotArea(type, msg) {
-    const area = document.getElementById('slot-area');
     const icons = { loading: '<div class="spinner"></div>', empty: '⚠', error: '✕' };
-
-    area.innerHTML =
+    document.getElementById('slot-area').innerHTML =
       `<div class="status-msg ${type === 'loading' ? 'loading' : type === 'empty' ? 'empty' : 'error-msg'}">
         ${icons[type] || ''} ${msg}
       </div>`;
-
     notifyHeight();
   }
 
@@ -672,25 +327,21 @@
     notifyHeight();
   }
 
-  // ─── Step 2 validation ───────────────────────────────────
   function validateStep2() {
     const name  = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const email = document.getElementById('email').value.trim();
-    const ok = name && phone && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-    document.getElementById('btn-next2').disabled = !ok;
+    document.getElementById('btn-next2').disabled =
+      !(name && phone && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
   }
 
-  // ─── Navigation ──────────────────────────────────────────
   function goStep(n) {
     if (n === 2) {
       state.location = document.getElementById('location').value;
       state.date     = document.getElementById('date').value;
-      state.duration = document.getElementById('duration').value;
+      state.duration = DURATION;
       state.slot     = selectedSlot;
     }
-
     if (n === 3) {
       state.name  = document.getElementById('name').value.trim();
       state.phone = document.getElementById('phone').value.trim();
@@ -701,10 +352,8 @@
     ['step1','step2','step3','step-done'].forEach(id =>
       document.getElementById(id).classList.remove('active')
     );
-
     const target = n === 'done' ? 'step-done' : `step${n}`;
     document.getElementById(target).classList.add('active');
-
     updateProgress(typeof n === 'number' ? n : 4);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     notifyHeight();
@@ -714,41 +363,36 @@
     [1,2,3].forEach(i => {
       const dot  = document.getElementById(`dot${i}`);
       const line = document.getElementById(`line${i}`);
-
       dot.className = 'step-dot' + (i < step ? ' done' : i === step ? ' active' : '');
       dot.innerHTML = i < step ? '' : `<span>${i}</span>`;
-
       if (line) line.className = 'step-line' + (i < step ? ' done' : '');
     });
   }
 
   function formatDateDisplay(dateStr) {
-  if (!dateStr) return '';
-  const [y, m, d] = dateStr.split('-');
-  return `${d}.${m}.${y}`;
-}
+    if (!dateStr) return '';
+    const [y, m, d] = dateStr.split('-');
+    return `${d}.${m}.${y}`;
+  }
 
   function renderSummary() {
     const rows = [
-      ['Lokacija',  state.location],
-      ['Datum', formatDateDisplay(state.date)],
-      ['Termin',    state.slot],
-      ['Trajanje',  state.duration + ' minuta'],
-      ['Ime',       state.name],
-      ['Telefon',   state.phone],
-      ['Email',     state.email],
+      ['Lokacija', state.location],
+      ['Datum',    formatDateDisplay(state.date)],
+      ['Termin',   state.slot],
+      ['Trajanje', state.duration + ' minuta'],
+      ['Ime',      state.name],
+      ['Telefon',  state.phone],
+      ['Email',    state.email],
     ];
-
     document.getElementById('summary').innerHTML = rows.map(([l, v]) =>
       `<div class="summary-row"><span class="s-label">${l}</span><span class="s-value">${v}</span></div>`
     ).join('');
   }
 
-  // ─── Submit preko JSONP, bez POST/CORS problema ──────────
   async function submitBooking() {
-    const btn = document.getElementById('btn-confirm');
+    const btn   = document.getElementById('btn-confirm');
     const errEl = document.getElementById('submit-error');
-
     btn.disabled = true;
     btn.textContent = 'Slanje…';
     errEl.style.display = 'none';
@@ -756,12 +400,12 @@
     try {
       const data = await apiFetch('createBooking', {
         location: state.location,
-        date: state.date,
+        date:     state.date,
         timeSlot: state.slot,
-        duration: parseInt(state.duration, 10),
-        name: state.name,
-        phone: state.phone,
-        email: state.email
+        duration: state.duration,
+        name:     state.name,
+        phone:    state.phone,
+        email:    state.email
       });
 
       if (data.status === 'ok') {
@@ -784,46 +428,31 @@
     }
   }
 
-  // ─── Reset ───────────────────────────────────────────────
   function resetForm() {
     selectedSlot = null;
     state = {};
-
     ['location','date','name','phone','email'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.value = '';
     });
-
-    const dur = document.getElementById('duration');
-    dur.innerHTML = '<option value="">— Prvo odaberi lokaciju —</option>';
-    dur.disabled = true;
-
     document.getElementById('date').disabled = true;
     document.getElementById('btn-next1').disabled = true;
     document.getElementById('btn-next2').disabled = true;
     document.getElementById('btn-confirm').disabled = false;
     document.getElementById('btn-confirm').textContent = 'Potvrdi termin';
     document.getElementById('ref-badge').textContent = '';
-
     clearSlotArea();
     goStep(1);
   }
 
-  // ─── Auto-resize for iframe embedding ────────────────────
   function notifyHeight() {
-    const height = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight
-    );
-
+    const height = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     window.parent.postMessage({ type: 'resize', height }, '*');
   }
 
   window.addEventListener('load', notifyHeight);
   window.addEventListener('resize', notifyHeight);
-
-  const ro = new ResizeObserver(notifyHeight);
-  ro.observe(document.body);
+  new ResizeObserver(notifyHeight).observe(document.body);
 </script>
 </body>
 </html>
